@@ -4,104 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagem/logo.png" type="image/x-icon">
-    <title>zupah</title>
+    <title>IMZ</title>
     <link rel="stylesheet" href="style.css">
 
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-      <script src="https://kit.fontawesome.com/8a6cb6a40e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
-<nav class="navbar-bottom">
-    <div class="nav-item active" onclick="trocarAba('inicio')">
-        <i class="fa-solid fa-house"></i>
-        <span>Inicio</span>
-    </div>
-    <div class="nav-item" onclick="trocarAba('multicontas')">
-        <i class="fa-solid fa-wallet"></i>
-        <span>Multicontas</span>
-    </div>
-    <div class="nav-item" onclick="trocarAba('investir')">
-        <i class="fa-solid fa-chart-line"></i>
-        <span>Investir</span>
-    </div>
-    <div class="nav-item" onclick="trocarAba('cartoes')">
-        <i class="fa-solid fa-credit-card"></i>
-        <span>cartões</span>
-    </div>
-</nav>
 
 <body>
 
-    <div class="perfil">
-        <h1>Olá, Fulano!</h1>
-        <i class="fa-solid fa-circle-user"></i>
-    </div>
-
-    <div class="box">
-        <p>Saldo em conta</p><br>
-        <p id="saldo">R$ ----</p>
-        <button onclick="toggleSaldo()" id="btn">
-            <img id="icone" src="imagem/olhoFechado.png">
-        </button>
-    </div>
-    <br>
-
-    <div class="container">
-        <div class="item">
-            <button type="button" class="btn btn-secondary btn-lg">
-                <i class="fa-solid fa-file-lines"></i>
-            </button>
-            <p>Extrato</p>
-        </div>
-        <div class="item">
-            <button type="button" class="btn btn-secondary btn-lg">
-                <i class="fa-brands fa-pix"></i>
-            </button>
-            <p>Pix</p>
-        </div>
-        <div class="item">
-            <button type="button" class="btn btn-secondary btn-lg">
-                <i class="fa-solid fa-arrow-right-arrow-left"></i>
-            </button>
-            <p>Transferir</p>
-        </div>
-        <div class="item">
-            <button type="button" class="btn btn-secondary btn-lg">
-                <i class="fa-solid fa-pager"></i>
-            </button>
-            <p>Pagar</p>
-        </div>
-        <div class="item">
-            <button type="button" class="btn btn-secondary btn-lg">
-                ...
-            </button>
-            <p>Ver mais</p>
-        </div>
-    </div>
-
-    <div class="cards">
-        <div class="card-conta">
-            <h1>Contas controle</h1>
-            <p>clique aqui para criar sua conta controle agora.</p>
-            <p class="saiba-mais">
-                saiba mais
-                <i class="fa-regular fa-circle-right"></i>
-            </p>
-        </div>
-        <div class="card-conta">
-            <h1>Contas objetivo</h1>
-            <p>Saldo total</p>
-            <p id="saldoObjetivo" onclick="toggleSaldoObjetivo()" style="cursor: pointer;">
-                R$ ----
-            </p>
-        </div>
-    </div>
-
     <nav class="navbar-bottom">
-        <div class="nav-item active" onclick="trocarAba('inicio')">
+        <div class="nav-item active" onclick="trocarAba('Home')">
             <i class="fa-solid fa-house"></i>
-            <span>Início</span>
+            <span>Home</span>
         </div>
         <div class="nav-item" onclick="trocarAba('multicontas')">
             <i class="fa-solid fa-wallet"></i>
@@ -116,6 +34,75 @@
             <span>Cartões</span>
         </div>
     </nav>
+
+    <div class="conteudo">
+
+        <div class="perfil">
+            <h1>Olá, Miguel!</h1>
+            <i class="fa-solid fa-circle-user"></i>
+        </div>
+
+        <div class="box">
+            <p>Saldo em conta</p><br>
+            <p id="saldo">R$ ----</p>
+            <button onclick="toggleSaldo()" id="btn">
+                 <i id="icone" class="fa-solid fa-eye-slash"></i>
+            </button>
+        </div>
+        <br>
+
+        <div class="container">
+            <div class="item">
+                <button type="button" class="btn btn-secondary btn-lg">
+                    <i class="fa-solid fa-file-lines"></i>
+                </button>
+                <p>Extrato</p>
+            </div>
+            <div class="item">
+                <button type="button" class="btn btn-secondary btn-lg">
+                    <i class="fa-brands fa-pix"></i>
+                </button>
+                <p>Pix</p>
+            </div>
+            <div class="item">
+                <button type="button" class="btn btn-secondary btn-lg">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+                <p>Transferir</p>
+            </div>
+            <div class="item">
+                <button type="button" class="btn btn-secondary btn-lg">
+                    <i class="fa-solid fa-pager"></i>
+                </button>
+                <p>Pagar</p>
+            </div>
+            <div class="item">
+                <button type="button" class="btn btn-secondary btn-lg">
+                    ...
+                </button>
+                <p>Ver mais</p>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card-conta">
+                <h1>Contas controle</h1>
+                <p>clique aqui para criar sua conta controle agora.</p>
+                <p class="saiba-mais">
+                    saiba mais
+                    <i class="fa-regular fa-circle-right"></i>
+                </p>
+            </div>
+            <div class="card-conta">
+                <h1>Contas objetivo</h1>
+                <p>Saldo total</p>
+                <p id="saldoObjetivo" onclick="toggleSaldoObjetivo()" style="cursor: pointer;">
+                    R$ ----
+                </p>
+            </div>
+        </div>
+
+    </div><!-- fecha .conteudo -->
 
     <script src="script.js"></script>
 </body>
